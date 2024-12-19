@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 // Load the Poppins font with desired weights and subsets
 const poppins = Poppins({
@@ -20,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.variable}>
+      <Header />
       <body className={` antialiased`}>{children}</body>
+      <Footer />
     </html>
   );
 }
